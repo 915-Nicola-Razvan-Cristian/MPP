@@ -1,0 +1,84 @@
+.add-button-container{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 150px;
+    position: absolute;
+    top: 60px;
+}
+
+
+button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: #136ce0;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: #136ce0;
+  }
+  
+  button,
+  button span {
+    transition: 200ms;
+  }
+  
+  button .text {
+    transform: translateX(15px);
+    color: white;
+    font-weight: bold;
+  }
+  
+  button .icon {
+    position: absolute;
+    border-left: 1px solid #000000;
+    transform: translateX(100px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button svg {
+    width: 15px;
+    fill: #eee;
+  }
+  
+  button:hover {
+    background: #136ce0;
+  }
+  
+  button:active {
+    background: #136ce0;
+  }
+  
+  button:hover .text {
+    color: transparent;
+  }
+  
+  button:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button:active .icon svg {
+    transform: scale(0.8);
+  }
+  
+  .buttonSpan {
+    color: white;
+    margin: 150px;
+    font-size: 30px;
+  }
+  
