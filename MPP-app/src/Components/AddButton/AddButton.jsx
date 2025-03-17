@@ -14,7 +14,7 @@ export default function AddButton() {
 
     return (
         <div className="add-button-container"> 
-            <button class="noselect" onClick={addButtonHandler}>
+            <button class="noselect" className='button' onClick={addButtonHandler}>
             <span class="text">Add a Book</span>
             <span class="icon">
                 <svg

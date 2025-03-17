@@ -1,35 +1,71 @@
+import axios from 'axios'
+import './Card.css'
 
-export default function Card() {
 
-    const cardStyle = {
-        backgroundColor: 'white',
-        width: '232px',
-        height: '340px',
-        borderRadius: '8px',
-        boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-        display: 'inline-flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: '16px',
-        margin: '16px',
+export default function Card(props) {
+
+
+    const handleDelete = async (id) => {
+        try {
+            await axios.delete(`http://localhost:8800/books/${id}`)
+            window.location.reload()
+        }
+        catch (err) {
+            console.log(err)
+        }
     }
-
-    const cardTitleStyle = {
-        fontSize: '24px',
-        fontWeight: 'bold',
-        color: 'black',
-    }
-    const cardContentStyle = {
-        fontSize: '16px',
-        color: 'black',
-    }
-
 
     return (
-        <div className="card" style={cardStyle}>
-            <div className="card-title" style={cardTitleStyle}>Card Title</div>
-            <div className="card-content" style={cardContentStyle}>Card Content</div>
+        <div className="card-container">
+            <div className="card">
+                {props.book.Cover && <img className='cover-img' src={props.book.Cover} alt="cover" />}
+                <div className="card-title" >{props.book.Title}</div>
+                <div className="card-content-container">
+                    <div className="card-content" >{props.book.Author}</div>
+                    <div className="card-content" >Rating: {props.book.Rating} / 10</div>
+                </div>
+            </div>
+            <button aria-label="Delete item" class="delete-button" onClick={() => handleDelete(props.book.id)}>
+                <svg
+                    class="trash-svg"
+                    viewBox="0 -10 64 74"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <g id="trash-can">
+                        <rect
+                            x="16"
+                            y="24"
+                            width="32"
+                            height="30"
+                            rx="3"
+                            ry="3"
+                            fill="#e74c3c"
+                        ></rect>
+
+                        <g transform-origin="12 18" id="lid-group">
+                            <rect
+                                x="12"
+                                y="12"
+                                width="40"
+                                height="6"
+                                rx="2"
+                                ry="2"
+                                fill="#c0392b"
+                            ></rect>
+                            <rect
+                                x="26"
+                                y="8"
+                                width="12"
+                                height="4"
+                                rx="2"
+                                ry="2"
+                                fill="#c0392b"
+                            ></rect>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+
         </div>
     )
 }

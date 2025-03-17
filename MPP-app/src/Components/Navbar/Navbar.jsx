@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { use } from 'react';
 import './Navbar.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Navbar()
 {
+
+    const navigate = useNavigate();
+
     return (
         <div className="nav">
             <div className="container">
-                <div className="btn">Home</div>
-                <div className="btn">Contact</div>
+                <div className="btn" onClick={() => navigate("/")}>Home</div>
+                <div className="btn">Reviews</div>
                 <div className="btn">About</div>
                 <div className="btn">FAQ</div>
                 <svg
