@@ -9,6 +9,7 @@ import Card from './Components/Card/Card'
 import AddButton from './Components/AddButton/AddButton'
 import MainPage from './Pages/MainPage'
 import AddForm from './Pages/AddForm'
+import UpdatePage from './Pages/UpdatePage'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -23,6 +24,7 @@ function App() {
             <Routes>
                 <Route path="" element={<MainPage/>}/>
                 <Route path='/addform' element={<AddForm/>}/>
+                <Route path='/update/:id' element={<UpdatePage/>}></Route>
             </Routes>
         </Router>
     </>

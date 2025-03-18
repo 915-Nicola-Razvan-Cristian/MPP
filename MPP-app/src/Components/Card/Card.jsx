@@ -1,9 +1,12 @@
 import axios from 'axios'
 import './Card.css'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 export default function Card(props) {
 
+
+    const navigate = useNavigate();
 
     const handleDelete = async (id) => {
         try {
@@ -13,6 +16,10 @@ export default function Card(props) {
         catch (err) {
             console.log(err)
         }
+    }
+
+    const handleUpdate = async (id) => {
+        navigate(`/update/`,{state: {id: props.book.id}})
     }
 
     return (
@@ -65,7 +72,7 @@ export default function Card(props) {
                     </g>
                 </svg>
             </button>
-
+            <button className='edit-button'><Link to={`update/${props.book.id}`}>Edit</Link></button>
         </div>
     )
 }

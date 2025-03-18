@@ -30,6 +30,28 @@ app.get('/books', (req, res) => {
   })
 })
 
+app.get('/books/author/:author', (req, res) => {
+  const q = `SELECT * FROM books WHERE author = ?`
+  db.query(q, [req.params.author], (err, result) => {
+    if (err) {
+      console.log(err)
+    } else {
+      res.json(result)
+    }
+  })
+})
+
+app.get('/books/search/:search', (req, res) => {
+  const q = `SELECT * FROM books WHERE title LIKE ?`
+  db.query(q, [`%${req.params.search}%`], (err, result) => {
+    if (err) {
+      console.log(err)
+    } else {
+      res.json(result)
+    }
+  })
+})
+
 app.post('/books', (req, res) => {
   //const { title, author, desc, cover } = req.body
   const q = `INSERT INTO books (title, author, genres, description, cover, rating) VALUES (?)`
@@ -51,6 +73,19 @@ app.delete('/books/:id', (req, res) => {
       console.log(err)
     } else {
       res.json('Book deleted.')
+    }
+  })
+})
+
+
+app.put('/books/:id', (req, res) => {
+  const q = `UPDATE books SET title = ?, author = ?, genres = ?, description = ?, cover = ?, rating = ? WHERE id = ?`
+  const values = [req.body.title, req.body.author, req.body.genres, req.body.desc, req.body.cover, req.body.rating, req.params.id]
+  db.query(q, values, (err, result) => {
+    if (err) {
+      console.log(err)
+    } else {
+      res.json('Book updated.')
     }
   })
 })

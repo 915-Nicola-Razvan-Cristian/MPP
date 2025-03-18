@@ -10,6 +10,11 @@
     transition: transform 0.2s ease;
   }
   
+
+  Link {
+    width: 30px;
+  }
+
   .trash-svg {
     width: 2em;
     height: 2em;
