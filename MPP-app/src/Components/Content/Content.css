@@ -2,8 +2,10 @@
 {
     margin: 5%;
     position: relative;
-    display: block;
-    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Adjust the gap as needed */
+    height: 150vh;
     padding: 25px;
     flex-shrink: 0;
     border-radius: 25px;

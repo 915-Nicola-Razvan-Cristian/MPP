@@ -12,7 +12,7 @@ export default function Navbar()
             <div className="container">
                 <div className="btn" onClick={() => navigate("/")}>Home</div>
                 <div className="btn">Reviews</div>
-                <div className="btn">About</div>
+                <div className="btn" onClick={() => navigate("/charts")}>Charts</div>
                 <div className="btn">FAQ</div>
                 <svg
                 className="outline"

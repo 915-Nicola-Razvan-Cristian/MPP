@@ -1,0 +1,12 @@
+
+.add-form {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    margin: 2%;
+    top: -30px;
+    position: relative;
+}

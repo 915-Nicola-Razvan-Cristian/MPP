@@ -1,3 +1,15 @@
+
+.back-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    width: 150px;
+    position: absolute;
+    left: -1%;
+    bottom: 11%;
+   }
+
 #back-button {
     display: flex;
     height: 3em;

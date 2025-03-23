@@ -7,12 +7,21 @@ input {
     margin: 1%;
 }
 
+.no-overflow {
+    overflow: hidden;
+    height: inherit;
+}
+
 .add-form {
     display: flex;
     flex-direction: column;
     height: inherit;
-    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
     margin: 2%;
+    top: -30px;
+    position: relative;
 }
 
 #root 
@@ -32,8 +41,39 @@ h1 {
     margin: 0px;
 }
 
-button {
-    bottom: 10px;
-    position: relative;
-    left: 5px;
+.noselect .icon {
+    color: white;
+    position: absolute;
+    border-left: 1px solid #000000;
+    transform: translateX(100px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+.noselect {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: #136ce0;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: #136ce0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+.noselect .text {
+    transform: translateX(15px);
+    color: white;
+    font-weight: bold;
 }

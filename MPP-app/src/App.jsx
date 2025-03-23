@@ -10,6 +10,7 @@ import AddButton from './Components/AddButton/AddButton'
 import MainPage from './Pages/MainPage'
 import AddForm from './Pages/AddForm'
 import UpdatePage from './Pages/UpdatePage'
+import Charts from './Pages/Charts'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -25,6 +26,7 @@ function App() {
                 <Route path="" element={<MainPage/>}/>
                 <Route path='/addform' element={<AddForm/>}/>
                 <Route path='/update/:id' element={<UpdatePage/>}></Route>
+                <Route path='/charts' element={<Charts/>}/>
             </Routes>
         </Router>
     </>

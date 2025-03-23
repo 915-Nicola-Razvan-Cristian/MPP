@@ -13,7 +13,7 @@ export default function AddButton() {
     }
 
     return (
-        <div className="add-button-container"> 
+        <div className="add-button-container" id='add-button-container'> 
             <button class="noselect" className='button' onClick={addButtonHandler}>
             <span class="text">Add a Book</span>
             <span class="icon">

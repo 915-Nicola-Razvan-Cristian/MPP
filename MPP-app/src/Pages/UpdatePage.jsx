@@ -3,17 +3,37 @@ import Navbar from "../Components/Navbar/Navbar";
 import BackButton from "../Components/BackButton/BackButton";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
-
+import { useState, useEffect } from "react";
+import './UpdatePage.css';
 
 const UpdatePage = () => {
 
-
+    
     const location = useLocation()
     const navigate = useNavigate()
 
+    const [book, setBook] = useState(null)
+
+    useEffect(() => {
+        const fetchBook = async () => {
+            try {
+                const res = await axios.get(`http://localhost:8800/books/${location.pathname.split("/")[2]}`)
+                setBook(res.data)   
+                console.log(res.data)
+            }
+            catch (err) {
+                console.log(err)
+            }
+        }
+        fetchBook()
+    }, [location.pathname])
+
+
+
+
     const updateButtonHandler = async () => {
-        if (document.getElementById('title').value === '' || document.getElementById('author').value === '') {
-            alert('Please fill in the Title and Author fields!');
+        if (document.getElementById('title').value === '' || document.getElementById('author').value === '' || document.getElementById('price').value === '') {
+            alert('Please fill in the Title, Author and Price fields!');
             return;
         }
         else {
@@ -22,7 +42,8 @@ const UpdatePage = () => {
                 author: document.getElementById('author').value,
                 cover: document.getElementById('cover').value,
                 desc: document.getElementById('desc').value,
-                rating: document.getElementById('rating').value ? document.getElementById('rating').value : null
+                rating: document.getElementById('rating').value ? document.getElementById('rating').value : null,
+                price : document.getElementById('price').value
             }
         
             try {
@@ -35,17 +56,24 @@ const UpdatePage = () => {
             }
         }
     }
-    
+
+    if (!book) {
+        return <div>Loading...</div>;
+    }
+    else
         return (
             <>  
                 <Navbar />
                 <div className="add-form">
                     <h1>Update Book</h1>
-                    <input id="title" type="text" placeholder="Title..." />
-                    <input id="author" type="text" placeholder="Author..." />
-                    <input id="cover" type="text" placeholder="*Cover..." />
-                    <input id="desc" type="text" placeholder="*Description..." />
-                    <input id="rating" type="number" placeholder="*Rating..." />
+                    <form>
+                    <label>Title: </label><label>Author: </label><input id="title" type="text" placeholder={book[0].Title} />
+                    <label>Author: </label><input id="author" type="text" placeholder={book[0].Author} />
+                    <label>Price: </label><input id="price" type="number" placeholder={book[0].Price} />
+                    <label>Cover: </label><input id="cover" type="text" placeholder="*Cover..."   />
+                    <label>Description: </label><input id="desc" type="text" placeholder="*Description..." />
+                    <label>Rating: </label><input id="rating" type="number" placeholder="*Rating..." />
+                    </form>
                     <label>* Optional</label>
                     <div className="add-button-container">
                         <button class="noselect" onClick={() => updateButtonHandler()}>

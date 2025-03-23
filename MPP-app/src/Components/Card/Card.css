@@ -8,8 +8,36 @@
     cursor: pointer;
     font-size: 1em;
     transition: transform 0.2s ease;
+    top: 0px;
   }
   
+  .button-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 100px;
+  }
+
+
+  .edit-button {
+  height: 36px;
+  width: 65px;
+  border: none;
+  top: 0px;
+  background: #a549da3d;
+  position: relative;
+  border-radius: 20px;
+  cursor: pointer;
+  }
+
+  .lable {
+    /* line-height: 22px; */
+    font-size: 19px;
+    color: #A649DA;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+  }
+
 
   Link {
     width: 30px;
@@ -47,6 +75,7 @@
 .card-container {
     display: inline-block;
     flex-direction: column;
+    margin: 24px 0;
     height: 400px;
     width: 300px;
 }
@@ -90,14 +119,21 @@
 }
 
 .card-content {
-    font-size: '16px';
+    font-size: '18px';
     position: relative;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     gap: 10px;
+    top:20px;
     padding: 5px;
     margin: 5px;
     z-index: 1;
     color: 'black';
     transform: translateY(100px);
+}
+
+
+#rating {
+  font-weight: bold;
 }
 
 

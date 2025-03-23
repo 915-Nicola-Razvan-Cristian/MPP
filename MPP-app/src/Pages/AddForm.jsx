@@ -24,8 +24,8 @@ const AddForm = () => {
     const navigate = useNavigate()
 
     const addFormButtonHandler = async () => {
-        if (document.getElementById('title').value === '' || document.getElementById('author').value === '') {
-            alert('Please fill in the Title and Author fields!');
+        if (document.getElementById('title').value === '' || document.getElementById('author').value === '' || document.getElementById('price').value === '') {
+            alert('Please fill in the Title, Author and Price fields!');
             return;
         }
         else {
@@ -34,7 +34,8 @@ const AddForm = () => {
                 author: document.getElementById('author').value,
                 cover: document.getElementById('cover').value,
                 desc: document.getElementById('desc').value,
-                rating: document.getElementById('rating').value ? document.getElementById('rating').value : null
+                rating: document.getElementById('rating').value ? document.getElementById('rating').value : null,
+                price: document.getElementById('price').value
             }
             setBook(newBook);
             try {
@@ -51,16 +52,18 @@ const AddForm = () => {
 
 
     return (
-        <>  
+        <div className="no-overflow">  
             <Navbar />
             <div className="add-form">
                 <h1>Add New Book</h1>
                 <input id="title" type="text" placeholder="Title..." />
                 <input id="author" type="text" placeholder="Author..." />
+                <input id="price" type="number" placeholder="Price..." />
                 <input id="cover" type="text" placeholder="*Cover..." />
                 <input id="desc" type="text" placeholder="*Description..." />
                 <input id="rating" type="number" placeholder="*Rating..." />
-                <label>* Optional</label>
+
+                <label>(* Optional)</label>
                 <div className="add-button-container">
                     <button class="noselect" onClick={addFormButtonHandler}>
                         <span class="text">Add Book</span>
@@ -76,7 +79,7 @@ const AddForm = () => {
                 </div>
                 <BackButton />
             </div>
-        </>
+        </div>
     );
 }
 

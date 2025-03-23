@@ -19,6 +19,19 @@ app.get('/', (req, res) => {
   res.json('Msg from backend server.')
 })
 
+
+app.get('/books/:id', (req, res) => {
+  const q = `SELECT * FROM books WHERE id = ?`
+  db.query(q, [req.params.id], (err, result) => {
+    if (err) {
+      console.log(err)
+    } else {
+      res.json(result)
+    }
+  })
+})
+
+
 app.get('/books', (req, res) => {
   const q ='SELECT * FROM books'
   db.query(q, (err, result) => {
@@ -52,10 +65,21 @@ app.get('/books/search/:search', (req, res) => {
   })
 })
 
+app.get('/books/search/:search/author/:author', (req, res) => {
+  const q = `SELECT * FROM books WHERE title LIKE ? AND author = ?`
+  db.query(q, [`%${req.params.search}%`, req.params.author], (err, result) => {
+    if (err) {
+      console.log(err)
+    } else {
+      res.json(result)
+    }
+  })
+})
+
 app.post('/books', (req, res) => {
   //const { title, author, desc, cover } = req.body
-  const q = `INSERT INTO books (title, author, genres, description, cover, rating) VALUES (?)`
-  const values = [[req.body.title, req.body.author, req.body.genres, req.body.desc, req.body.cover, req.body.rating]]
+  const q = `INSERT INTO books (title, author, genres, description, cover, rating, price) VALUES (?)`
+  const values = [[req.body.title, req.body.author, req.body.genres, req.body.desc, req.body.cover, req.body.rating, req.body.price]]
   db.query(q, values, (err, result) => {
     if (err) { 
       console.log(err)
