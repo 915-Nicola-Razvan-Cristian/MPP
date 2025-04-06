@@ -5,13 +5,15 @@ import AddButton from "../Components/AddButton/AddButton";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
+import { saveBook } from "../utils/offlineStorage";
 
 
 
 
+const AddForm = (props) => {
 
-const AddForm = () => {
 
+    let offlineID = 1; 
 
     const [book, setBook] = useState({
         title: "",
@@ -28,7 +30,10 @@ const AddForm = () => {
             alert('Please fill in the Title, Author and Price fields!');
             return;
         }
-        else {
+
+
+
+        if (!props.isOfflineMode) {
             const newBook = {
                 title: document.getElementById('title').value,
                 author: document.getElementById('author').value,
@@ -47,12 +52,27 @@ const AddForm = () => {
                 console.log(err)
             }
         }
+        else {
+            const newBook = {
+                id: offlineID++,
+                title: document.getElementById('title').value,
+                author: document.getElementById('author').value,
+                cover: document.getElementById('cover').value,
+                desc: document.getElementById('desc').value,
+                rating: document.getElementById('rating').value ? document.getElementById('rating').value : null,
+                price: document.getElementById('price').value
+            }
+            console.log(newBook)
+            saveBook(newBook)
+            alert('Book added succesfully in offline mode!')
+            navigate('/')
+        }
     }
-    console.log(book)
+    // console.log(book)
 
 
     return (
-        <div className="no-overflow">  
+        <div className="no-overflow">
             <Navbar />
             <div className="add-form">
                 <h1>Add New Book</h1>

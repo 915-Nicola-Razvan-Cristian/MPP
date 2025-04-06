@@ -1,0 +1,29 @@
+.dashboard {
+    /* padding: 20px; */
+    font-family: Arial, sans-serif;
+  }
+  
+  .chart-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    align-items:center;
+    justify-content: left;
+    margin-top: 20px;
+  }
+  
+  .chart {
+    size-adjust:inherit;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 90px;
+    width: 80%;
+    height: 40%;
+  }
+
+  
+h2 {
+    color: #555;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }

@@ -3,9 +3,10 @@
     margin: 5%;
     position: relative;
     display: grid;
+    margin-bottom: 32px;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px; /* Adjust the gap as needed */
-    height: 150vh;
+    height: auto; /* Change to 140vh for scroll bar */
     padding: 25px;
     flex-shrink: 0;
     border-radius: 25px;

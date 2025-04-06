@@ -32,19 +32,22 @@ const UpdatePage = () => {
 
 
     const updateButtonHandler = async () => {
-        if (document.getElementById('title').value === '' || document.getElementById('author').value === '' || document.getElementById('price').value === '') {
-            alert('Please fill in the Title, Author and Price fields!');
-            return;
-        }
-        else {
-            const newBook = {
-                title: document.getElementById('title').value,
-                author: document.getElementById('author').value,
-                cover: document.getElementById('cover').value,
-                desc: document.getElementById('desc').value,
-                rating: document.getElementById('rating').value ? document.getElementById('rating').value : null,
-                price : document.getElementById('price').value
-            }
+        // if (document.getElementById('title').value === '' || document.getElementById('author').value === '' || document.getElementById('price').value === '') {
+        //     alert('Please fill in the Title, Author and Price fields!');
+        //     return;
+        // }
+        // else {
+            const newBook = { ...book[0] };
+            console.log(newBook)
+            const fields = ['title', 'author', 'cover', 'desc', 'rating', 'price'];
+            fields.forEach(field => {
+                const value = document.getElementById(field).value;
+                if (value !== '' && value !== null) {
+                    newBook[field] = value;
+                }
+            });
+
+            console.log(newBook)
         
             try {
                 await axios.put(`http://localhost:8800/books/${location.pathname.split("/")[2]}`, newBook)
@@ -54,7 +57,7 @@ const UpdatePage = () => {
             catch (err) {
                 console.log(err)
             }
-        }
+        // }
     }
 
     if (!book) {

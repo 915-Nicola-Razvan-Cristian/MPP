@@ -1,21 +1,31 @@
 import axios from 'axios'
 import './Card.css'
 import { Link, useNavigate } from 'react-router-dom'
-import { useEffect, useRef } from 'react';
+import { forwardRef, useEffect, useRef } from 'react';
+import { saveOperation, getAllOperations, clearOperations, getAllBooks, deleteBook } from "../../utils/offlineStorage";
 
 
-export default function Card(props) {
+const Card = forwardRef((props, ref) => {
 
 
     const navigate = useNavigate();
 
     const handleDelete = async (id) => {
-        try {
-            await axios.delete(`http://localhost:8800/books/${id}`)
-            window.location.reload()
+
+        if (props.isOfflineMode) {
+            deleteBook(id)
+             alert("Book deleted. Changes will be synced when you are online.")
+            props.onDelete(id)
+             return
         }
-        catch (err) {
-            console.log(err)
+        else {
+            try {
+                await axios.delete(`http://localhost:8800/books/${id}`)
+                props.onDelete(id)
+            }
+            catch (err) {
+                console.log(err)
+            }
         }
     }
 
@@ -29,16 +39,16 @@ export default function Card(props) {
 
     useEffect(() => {
         const colorful = () => {
-            if (props.book.Rating >= 8) {
+            if (props.book.rating >= 8) {
                 ratingRef.current.style.color = 'gold'
             }
-            else if (props.book.Rating >= 5) {
+            else if (props.book.rating >= 5) {
                 ratingRef.current.style.color = 'orange'
             }
             else {
                 ratingRef.current.style.color = 'red'
             }
-            if (!props.book.Rating) {
+            if (!props.book.rating) {
                 ratingRef.current.innerHTML = "Rating: N/A"
                 ratingRef.current.style.color = 'grey'
             }
@@ -47,14 +57,14 @@ export default function Card(props) {
     }, []
     )
     return (
-        <div className="card-container">
+        <div className="card-container" ref={ref}>
             <div className="card">
-                {props.book.Cover && <img className='cover-img' src={props.book.Cover} alt="cover" />}
-                <div className="card-title" >{props.book.Title}</div>
+                {props.book.Cover && <img className='cover-img' src={props.book.cover} alt="cover" />}
+                <div className="card-title" >{props.book.title}</div>
                 <div className="card-content-container">
-                    <div className="card-content" id='author'>{props.book.Author}</div>
-                    <div className="card-content" id='rating' ref={ratingRef}>Rating: {props.book.Rating} / 10</div>
-                    <div className="card-content" id='price' >Price: {props.book.Price}$</div>
+                    <div className="card-content" id='author'>{props.book.author}</div>
+                    <div className="card-content" id='rating' ref={ratingRef}>Rating: {props.book.rating} / 10</div>
+                    <div className="card-content" id='price' >Price: {props.book.price}$</div>
                 </div>
             </div>
             <div className='button-container'>
@@ -105,4 +115,6 @@ export default function Card(props) {
             {/* <button className='edit-button'><Link to={`update/${props.book.id}`}>Edit</Link></button> */}
         </div>
     )
-}
+})
+
+export default Card;
