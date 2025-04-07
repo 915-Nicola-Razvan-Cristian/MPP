@@ -7,6 +7,7 @@ import UpdatePage from './Pages/UpdatePage'
 import Charts from './Pages/Charts'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import FileUpload from './Pages/FileUpload'
 
 
 
@@ -25,6 +26,7 @@ function App() {
                 <Route path='/addform' element={<AddForm isOfflineMode={isOfflineMode}/>}/>
                 <Route path='/update/:id' element={<UpdatePage isOfflineMode={isOfflineMode}/>}></Route>
                 <Route path='/charts' element={<Charts isOfflineMode={isOfflineMode}/>}/>
+                <Route path='/uploads' element={<FileUpload/>}/>
             </Routes>
         </Router>
     </>

@@ -1,6 +1,7 @@
 import express from 'express'
 import mysql from 'mysql'
 import cors from 'cors'
+import multer from 'multer'
 
 import { Server } from 'socket.io'
 import { createServer } from 'http'
@@ -15,14 +16,35 @@ const db = mysql.createConnection({
   database: 'lib_db'
 })
 
-
-let books = [];
-let nextId = 1;
-
 app.use(cors({
   origin: 'http://localhost:5173',
   credentials: true
 }));
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/')
+  },
+  filename: function (req, file, cb) {
+    const uniquePreffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+    cb(null, uniquePreffix + '-' + file.originalname)
+  },
+});
+
+
+const upload = multer({ storage })
+
+
+app.post('/upload', upload.single('file'), (req, res) => {
+  res.send('File uploaded successfully!')
+})
+
+
+
+let books = [];
+let nextId = 1;
+
+
 
 const httpServer = createServer(app)
 const io = new Server(httpServer, {
