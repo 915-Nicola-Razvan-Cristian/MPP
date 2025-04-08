@@ -5,20 +5,26 @@ import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import './UpdatePage.css';
+import { getAllBooks, saveBook, updateBook } from "../utils/offlineStorage";
 
-const UpdatePage = () => {
+const UpdatePage = (props) => {
 
-    
+
     const location = useLocation()
     const navigate = useNavigate()
 
     const [book, setBook] = useState(null)
 
     useEffect(() => {
+        if(props.isOfflineMode) {
+            const offlineBooks = getAllBooks().find((book) => book.id === parseInt(location.pathname.split("/")[2]));
+            setBook([offlineBooks]);
+            return;
+            }
         const fetchBook = async () => {
             try {
                 const res = await axios.get(`http://localhost:8800/books/${location.pathname.split("/")[2]}`)
-                setBook(res.data)   
+                setBook(res.data)
                 console.log(res.data)
             }
             catch (err) {
@@ -37,26 +43,33 @@ const UpdatePage = () => {
         //     return;
         // }
         // else {
-            const newBook = { ...book[0] };
-            console.log(newBook)
-            const fields = ['title', 'author', 'cover', 'desc', 'rating', 'price'];
-            fields.forEach(field => {
-                const value = document.getElementById(field).value;
-                if (value !== '' && value !== null) {
-                    newBook[field] = value;
-                }
-            });
 
-            console.log(newBook)
         
-            try {
-                await axios.put(`http://localhost:8800/books/${location.pathname.split("/")[2]}`, newBook)
-                alert('Book updated succesfully!')
-                navigate('/')
+        const newBook = { ...book[0] };
+        console.log(newBook)
+        const fields = ['title', 'author', 'cover', 'desc', 'rating', 'price'];
+        fields.forEach(field => {
+            const value = document.getElementById(field).value;
+            if (value !== '' && value !== null) {
+                newBook[field] = value;
             }
-            catch (err) {
-                console.log(err)
-            }
+        });
+
+        console.log(newBook)
+        if (props.isOfflineMode) {
+            updateBook(location.pathname.split('/')[2], newBook)
+            alert("Book updated. Changes will be synced when you are online.")
+            navigate('/')
+            return
+        }
+        try {
+            await axios.put(`http://localhost:8800/books/${location.pathname.split("/")[2]}`, newBook)
+            alert('Book updated succesfully!')
+            navigate('/')
+        }
+        catch (err) {
+            console.log(err)
+        }
         // }
     }
 
@@ -65,17 +78,17 @@ const UpdatePage = () => {
     }
     else
         return (
-            <>  
+            <>
                 <Navbar />
                 <div className="add-form">
                     <h1>Update Book</h1>
                     <form>
-                    <label>Title: </label><label>Author: </label><input id="title" type="text" placeholder={book[0].Title} />
-                    <label>Author: </label><input id="author" type="text" placeholder={book[0].Author} />
-                    <label>Price: </label><input id="price" type="number" placeholder={book[0].Price} />
-                    <label>Cover: </label><input id="cover" type="text" placeholder="*Cover..."   />
-                    <label>Description: </label><input id="desc" type="text" placeholder="*Description..." />
-                    <label>Rating: </label><input id="rating" type="number" placeholder="*Rating..." />
+                        <label>Title: </label><label>Author: </label><input id="title" type="text" placeholder={book[0].title} />
+                        <label>Author: </label><input id="author" type="text" placeholder={book[0].author} />
+                        <label>Price: </label><input id="price" type="number" placeholder={book[0].price} />
+                        <label>Cover: </label><input id="cover" type="text" placeholder="*Cover..." />
+                        <label>Description: </label><input id="desc" type="text" placeholder="*Description..." />
+                        <label>Rating: </label><input id="rating" type="number" placeholder="*Rating..." />
                     </form>
                     <label>* Optional</label>
                     <div className="add-button-container">

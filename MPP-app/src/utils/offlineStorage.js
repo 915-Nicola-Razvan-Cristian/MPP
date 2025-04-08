@@ -24,6 +24,18 @@ export function deleteBook(id) {
     localStorage.setItem('offlineBooks', JSON.stringify(updated));
 }
 
+
+export function updateBook(id, updatedBook) {
+    const current = JSON.parse(localStorage.getItem('offlineBooks') || '[]');
+    current.forEach(book => {
+      if (book.id === id) {
+        Object.assign(book, updatedBook);
+      }
+    });
+    localStorage.setItem('offlineBooks', JSON.stringify(current));
+}
+
+
 export function getAllBooks() {
     return JSON.parse(localStorage.getItem('offlineBooks') || '[]');
 }

@@ -6,6 +6,7 @@ import AddForm from './Pages/AddForm'
 import UpdatePage from './Pages/UpdatePage'
 import Charts from './Pages/Charts'
 import MediaPage from './Pages/MediaPage'
+import DownloadPage from './Pages/DownloadPage'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import FileUpload from './Pages/FileUpload'
@@ -29,6 +30,7 @@ function App() {
                 <Route path='/charts' element={<Charts isOfflineMode={isOfflineMode}/>}/>
                 <Route path='/uploads' element={<FileUpload isOfflineMode={isOfflineMode}/>}/>
                 <Route path="/media/*" element={<MediaPage isOfflineMode={isOfflineMode}/>}/>
+                <Route path="/downloads" element={<DownloadPage isOfflineMode={isOfflineMode}/>}/>
             </Routes>
         </Router>
     </>

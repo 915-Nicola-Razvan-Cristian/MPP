@@ -27,10 +27,6 @@ export default function Charts() {
 
 
     const [books, setBooks] = useState([])
-
-
-    
-
     useEffect(() => {
         const fetchBooks = async () => {
             try {
@@ -46,45 +42,47 @@ export default function Charts() {
     }, [])
 
 
-    useEffect( () => {
-    const socket = io('http://localhost:8800', {
-        withCredentials: true,
-        autoConnect: true,
-        transports: ['websocket']
-    });
+    useEffect(() => {
+        const socket = io('http://localhost:8800', {
+            withCredentials: true,
+            autoConnect: true,
+            transports: ['websocket']
+        });
 
+        socket.on('connect', () => {
+            console.log('Connected to Socket.IO server!', socket.id);
+        });
 
-    socket.on('connect', () => {
-        console.log('Connected to Socket.IO server!', socket.id);
-      });
-      
-      socket.on('disconnect', () => {
-        console.log('Disconnected from Socket.IO server');
-      });
+        socket.on('disconnect', () => {
+            console.log('Disconnected from Socket.IO server');
+        });
 
-      socket.on('bookUpdate', async () => {
-        try {
-            const res = await axios.get(`http://localhost:8800/books`);
-            console.log(res)
-            setBooks(res.data)
-        }
-        catch (err) {
-            console.log(err)
-        }
-    })
-      
-      // Handle initial data
-      socket.on('initialData', (data) => {
-        console.log('Received initial data:', data);
-      });
-    })
+        socket.on('bookUpdate', async () => {
+            try {
+                const res = await axios.get(`http://localhost:8800/books`);
+                console.log(res);
+                setBooks(res.data);
+            } catch (err) {
+                console.log(err);
+            }
+        });
+
+        // Handle initial data
+        socket.on('initialData', (data) => {
+            console.log('Received initial data:', data);
+            setBooks(data);
+        });
+
+        // Cleanup function to disconnect socket
+        
+    }, []);
 
 
     const ratingData = {
-        labels: books.map(book => book.Title),
+        labels: books.map(book => book.title),
         datasets: [{
             label: 'Ratings',
-            data: books.map(book => book.Rating),
+            data: books.map(book => book.rating),
             backgroundColor: 'rgba(54, 162, 235, 0.5)',
             borderColor: 'rgba(54, 162, 235, 1)',
             borderWidth: 1
@@ -93,10 +91,10 @@ export default function Charts() {
 
 
     const priceData = {
-        labels: books.map(book => book.Title || `Book ${book.id}`),
+        labels: books.map(book => book.title || `Book ${book.id}`),
         datasets: [{
             label: 'Prices',
-            data: books.map(book => parseFloat(book.Price)),
+            data: books.map(book => parseFloat(book.price)),
             backgroundColor: 'rgba(255, 99, 132, 0.5)',
             borderColor: 'rgba(255, 99, 132, 1)',
             borderWidth: 1,
@@ -110,19 +108,19 @@ export default function Charts() {
         datasets: [{
             data: [
                 books.filter(book => {
-                    const rating = book.Rating;
+                    const rating = book.rating;
                     return rating >= 1 && rating <= 3;
                 }).length,
                 books.filter(book => {
-                    const rating = book.Rating;
+                    const rating = book.rating;
                     return rating >= 4 && rating <= 6;
                 }).length,
                 books.filter(book => {
-                    const rating = book.Rating;
+                    const rating = book.rating;
                     return rating >= 7 && rating <= 8;
                 }).length,
                 books.filter(book => {
-                    const rating = book.Rating;
+                    const rating = book.rating;
                     return rating >= 9 && rating <= 10;
                 }).length,
             ],
