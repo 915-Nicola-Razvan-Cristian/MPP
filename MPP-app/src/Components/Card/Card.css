@@ -19,6 +19,17 @@
   }
 
 
+  .media-button {
+    position: relative;
+    left: -70px;
+    top: 8px;
+    height: 36px;
+    width: 65px;
+    border: none;
+    cursor: pointer;
+  }
+
+
   .edit-button {
   height: 36px;
   width: 65px;

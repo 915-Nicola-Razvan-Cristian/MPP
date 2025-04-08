@@ -21,29 +21,6 @@ app.use(cors({
   credentials: true
 }));
 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'uploads/')
-  },
-  filename: function (req, file, cb) {
-    const uniquePreffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
-    cb(null, uniquePreffix + '-' + file.originalname)
-  },
-});
-
-
-const upload = multer({ storage })
-
-
-app.post('/upload', upload.single('file'), (req, res) => {
-  res.send('File uploaded successfully!')
-})
-
-
-
-let books = [];
-let nextId = 1;
-
 
 
 const httpServer = createServer(app)
@@ -71,6 +48,45 @@ io.on('connection', (socket) => {
     console.log('Client disconnected:', socket.id);
   });
 });
+
+
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/')
+  },
+  filename: function (req, file, cb) {
+    const uniquePreffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+    cb(null, uniquePreffix + '-' + file.originalname)
+  },
+});
+
+
+const upload = multer({ storage })
+
+
+app.post('/upload', upload.single('file'), (req, res) => {
+  res.send('File uploaded successfully!')
+})
+
+app.get('/media/:filename', (req, res) => {
+  const filename = req.params.filename;
+  const filePath = `media/${filename}`;
+  res.download(filePath, (err) => {
+    if (err) {
+      console.log(err);
+      return res.status(500).send('Error downloading file');
+    }
+  });
+});
+
+
+
+let books = [];
+let nextId = 1;
+
+
+
 
 
 // Broadcast book updates to all connected clients
@@ -101,7 +117,7 @@ const broadcastBookUpdate = () => {
 // ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Razvan2005'
 
 app.use(express.json())
-app.use(cors())
+// app.use(cors()) // Removed duplicate CORS middleware
 
 app.get('/', (req, res) => {
   res.json('Msg from backend server.')

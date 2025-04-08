@@ -111,6 +111,7 @@ const Card = forwardRef((props, ref) => {
                 <button onClick={handleUpdate} class="edit-button">
                     <span class="lable">Edit</span>
                 </button>
+                <Link to={`/media/${props.book.media}`} className='media-button'>Media</Link>
             </div>
             {/* <button className='edit-button'><Link to={`update/${props.book.id}`}>Edit</Link></button> */}
         </div>
