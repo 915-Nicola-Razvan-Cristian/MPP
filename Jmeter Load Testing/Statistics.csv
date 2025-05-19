@@ -1,0 +1,201 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1746524423569,23,Books By Genre,200,OK,Statistics Endpoints 2-1,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,23,0,2
+1746524423593,38,Top Authors,200,OK,Statistics Endpoints 2-1,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,38,0,0
+1746524423631,25,Books By Genre,200,OK,Statistics Endpoints 2-1,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,25,0,0
+1746524423656,36,Top Authors,200,OK,Statistics Endpoints 2-1,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,36,0,0
+1746524423693,20,Books By Genre,200,OK,Statistics Endpoints 2-1,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,20,0,0
+1746524423713,32,Top Authors,200,OK,Statistics Endpoints 2-1,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,32,0,0
+1746524423746,29,Books By Genre,200,OK,Statistics Endpoints 2-1,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,29,0,0
+1746524423775,27,Top Authors,200,OK,Statistics Endpoints 2-1,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,26,0,0
+1746524423815,16,Books By Genre,200,OK,Statistics Endpoints 2-1,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,16,0,0
+1746524423831,39,Top Authors,200,OK,Statistics Endpoints 2-1,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,39,0,0
+1746524423871,19,Books By Genre,200,OK,Statistics Endpoints 2-1,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,19,0,0
+1746524423890,27,Top Authors,200,OK,Statistics Endpoints 2-1,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,27,0,0
+1746524423918,19,Books By Genre,200,OK,Statistics Endpoints 2-1,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,18,0,0
+1746524423937,27,Top Authors,200,OK,Statistics Endpoints 2-1,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,26,0,0
+1746524423964,16,Books By Genre,200,OK,Statistics Endpoints 2-1,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,16,0,0
+1746524423980,40,Top Authors,200,OK,Statistics Endpoints 2-1,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,40,0,0
+1746524424020,24,Books By Genre,200,OK,Statistics Endpoints 2-1,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,24,0,0
+1746524424045,48,Top Authors,200,OK,Statistics Endpoints 2-1,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,48,0,0
+1746524424094,15,Books By Genre,200,OK,Statistics Endpoints 2-1,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,15,0,0
+1746524424110,32,Top Authors,200,OK,Statistics Endpoints 2-1,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,32,0,0
+1746524425555,24,Books By Genre,200,OK,Statistics Endpoints 2-2,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,24,0,2
+1746524425579,32,Top Authors,200,OK,Statistics Endpoints 2-2,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,32,0,0
+1746524425611,20,Books By Genre,200,OK,Statistics Endpoints 2-2,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,20,0,0
+1746524425631,42,Top Authors,200,OK,Statistics Endpoints 2-2,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,42,0,0
+1746524425673,35,Books By Genre,200,OK,Statistics Endpoints 2-2,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,35,0,0
+1746524425708,23,Top Authors,200,OK,Statistics Endpoints 2-2,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,23,0,0
+1746524425731,24,Books By Genre,200,OK,Statistics Endpoints 2-2,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,23,0,0
+1746524425755,30,Top Authors,200,OK,Statistics Endpoints 2-2,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,30,0,0
+1746524425785,16,Books By Genre,200,OK,Statistics Endpoints 2-2,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,16,0,0
+1746524425802,40,Top Authors,200,OK,Statistics Endpoints 2-2,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,40,0,0
+1746524425842,22,Books By Genre,200,OK,Statistics Endpoints 2-2,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,22,0,0
+1746524425864,30,Top Authors,200,OK,Statistics Endpoints 2-2,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,30,0,0
+1746524425895,17,Books By Genre,200,OK,Statistics Endpoints 2-2,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,17,0,0
+1746524425912,36,Top Authors,200,OK,Statistics Endpoints 2-2,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,36,0,0
+1746524425948,18,Books By Genre,200,OK,Statistics Endpoints 2-2,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,18,0,0
+1746524425967,30,Top Authors,200,OK,Statistics Endpoints 2-2,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,30,0,0
+1746524425997,14,Books By Genre,200,OK,Statistics Endpoints 2-2,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,14,0,0
+1746524426011,35,Top Authors,200,OK,Statistics Endpoints 2-2,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,35,0,0
+1746524426046,15,Books By Genre,200,OK,Statistics Endpoints 2-2,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,15,0,0
+1746524426061,32,Top Authors,200,OK,Statistics Endpoints 2-2,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,32,0,0
+1746524427556,20,Books By Genre,200,OK,Statistics Endpoints 2-3,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,20,0,2
+1746524427576,32,Top Authors,200,OK,Statistics Endpoints 2-3,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,32,0,0
+1746524427608,22,Books By Genre,200,OK,Statistics Endpoints 2-3,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,22,0,0
+1746524427630,27,Top Authors,200,OK,Statistics Endpoints 2-3,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,27,0,0
+1746524427658,21,Books By Genre,200,OK,Statistics Endpoints 2-3,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,21,0,0
+1746524427680,29,Top Authors,200,OK,Statistics Endpoints 2-3,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,29,0,0
+1746524427709,16,Books By Genre,200,OK,Statistics Endpoints 2-3,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,16,0,0
+1746524427725,29,Top Authors,200,OK,Statistics Endpoints 2-3,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,29,0,0
+1746524427754,15,Books By Genre,200,OK,Statistics Endpoints 2-3,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,15,0,0
+1746524427770,37,Top Authors,200,OK,Statistics Endpoints 2-3,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,37,0,0
+1746524427807,24,Books By Genre,200,OK,Statistics Endpoints 2-3,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,24,0,0
+1746524427831,30,Top Authors,200,OK,Statistics Endpoints 2-3,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,30,0,0
+1746524427861,16,Books By Genre,200,OK,Statistics Endpoints 2-3,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,16,0,0
+1746524427877,36,Top Authors,200,OK,Statistics Endpoints 2-3,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,36,0,0
+1746524427913,16,Books By Genre,200,OK,Statistics Endpoints 2-3,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,16,0,0
+1746524427930,36,Top Authors,200,OK,Statistics Endpoints 2-3,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,36,0,0
+1746524427967,19,Books By Genre,200,OK,Statistics Endpoints 2-3,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,19,0,0
+1746524427986,31,Top Authors,200,OK,Statistics Endpoints 2-3,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,31,0,0
+1746524428017,15,Books By Genre,200,OK,Statistics Endpoints 2-3,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,15,0,0
+1746524428032,36,Top Authors,200,OK,Statistics Endpoints 2-3,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,36,0,0
+1746524429556,23,Books By Genre,200,OK,Statistics Endpoints 2-4,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,23,0,2
+1746524429579,31,Top Authors,200,OK,Statistics Endpoints 2-4,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,31,0,0
+1746524429611,28,Books By Genre,200,OK,Statistics Endpoints 2-4,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,28,0,0
+1746524429639,28,Top Authors,200,OK,Statistics Endpoints 2-4,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,28,0,0
+1746524429668,17,Books By Genre,200,OK,Statistics Endpoints 2-4,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,17,0,0
+1746524429685,32,Top Authors,200,OK,Statistics Endpoints 2-4,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,32,0,0
+1746524429717,15,Books By Genre,200,OK,Statistics Endpoints 2-4,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,15,0,0
+1746524429732,33,Top Authors,200,OK,Statistics Endpoints 2-4,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,33,0,0
+1746524429765,20,Books By Genre,200,OK,Statistics Endpoints 2-4,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,20,0,0
+1746524429786,29,Top Authors,200,OK,Statistics Endpoints 2-4,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,29,0,0
+1746524429815,14,Books By Genre,200,OK,Statistics Endpoints 2-4,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,14,0,0
+1746524429830,46,Top Authors,200,OK,Statistics Endpoints 2-4,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,46,0,0
+1746524429876,16,Books By Genre,200,OK,Statistics Endpoints 2-4,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,16,0,0
+1746524429892,33,Top Authors,200,OK,Statistics Endpoints 2-4,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,33,0,0
+1746524429925,14,Books By Genre,200,OK,Statistics Endpoints 2-4,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,14,0,0
+1746524429939,40,Top Authors,200,OK,Statistics Endpoints 2-4,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,40,0,0
+1746524429980,17,Books By Genre,200,OK,Statistics Endpoints 2-4,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,17,0,0
+1746524429997,27,Top Authors,200,OK,Statistics Endpoints 2-4,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,27,0,0
+1746524430025,14,Books By Genre,200,OK,Statistics Endpoints 2-4,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,14,0,0
+1746524430039,37,Top Authors,200,OK,Statistics Endpoints 2-4,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,37,0,0
+1746524431557,25,Books By Genre,200,OK,Statistics Endpoints 2-5,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,25,0,3
+1746524431582,32,Top Authors,200,OK,Statistics Endpoints 2-5,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,32,0,0
+1746524431614,21,Books By Genre,200,OK,Statistics Endpoints 2-5,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,21,0,0
+1746524431635,32,Top Authors,200,OK,Statistics Endpoints 2-5,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,32,0,0
+1746524431667,18,Books By Genre,200,OK,Statistics Endpoints 2-5,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,18,0,0
+1746524431685,42,Top Authors,200,OK,Statistics Endpoints 2-5,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,42,0,0
+1746524431727,18,Books By Genre,200,OK,Statistics Endpoints 2-5,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,18,0,0
+1746524431745,30,Top Authors,200,OK,Statistics Endpoints 2-5,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,30,0,0
+1746524431775,24,Books By Genre,200,OK,Statistics Endpoints 2-5,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,24,0,0
+1746524431799,27,Top Authors,200,OK,Statistics Endpoints 2-5,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,27,0,0
+1746524431826,20,Books By Genre,200,OK,Statistics Endpoints 2-5,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,20,0,0
+1746524431846,34,Top Authors,200,OK,Statistics Endpoints 2-5,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,34,0,0
+1746524431881,14,Books By Genre,200,OK,Statistics Endpoints 2-5,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,14,0,0
+1746524431896,30,Top Authors,200,OK,Statistics Endpoints 2-5,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,30,0,0
+1746524431926,20,Books By Genre,200,OK,Statistics Endpoints 2-5,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,20,0,0
+1746524431947,34,Top Authors,200,OK,Statistics Endpoints 2-5,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,34,0,0
+1746524431981,21,Books By Genre,200,OK,Statistics Endpoints 2-5,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,21,0,0
+1746524432003,31,Top Authors,200,OK,Statistics Endpoints 2-5,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,31,0,0
+1746524432034,15,Books By Genre,200,OK,Statistics Endpoints 2-5,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,15,0,0
+1746524432050,52,Top Authors,200,OK,Statistics Endpoints 2-5,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,52,0,0
+1746524433555,23,Books By Genre,200,OK,Statistics Endpoints 2-6,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,23,0,0
+1746524433578,32,Top Authors,200,OK,Statistics Endpoints 2-6,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,32,0,0
+1746524433610,22,Books By Genre,200,OK,Statistics Endpoints 2-6,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,22,0,0
+1746524433632,32,Top Authors,200,OK,Statistics Endpoints 2-6,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,32,0,0
+1746524433665,19,Books By Genre,200,OK,Statistics Endpoints 2-6,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,19,0,0
+1746524433684,29,Top Authors,200,OK,Statistics Endpoints 2-6,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,29,0,0
+1746524433713,21,Books By Genre,200,OK,Statistics Endpoints 2-6,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,21,0,0
+1746524433734,35,Top Authors,200,OK,Statistics Endpoints 2-6,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,35,0,0
+1746524433770,17,Books By Genre,200,OK,Statistics Endpoints 2-6,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,17,0,0
+1746524433787,31,Top Authors,200,OK,Statistics Endpoints 2-6,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,31,0,0
+1746524433820,16,Books By Genre,200,OK,Statistics Endpoints 2-6,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,16,0,0
+1746524433837,27,Top Authors,200,OK,Statistics Endpoints 2-6,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,27,0,0
+1746524433876,22,Books By Genre,200,OK,Statistics Endpoints 2-6,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,22,0,0
+1746524433899,22,Top Authors,200,OK,Statistics Endpoints 2-6,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,22,0,0
+1746524433921,14,Books By Genre,200,OK,Statistics Endpoints 2-6,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,14,0,0
+1746524433936,32,Top Authors,200,OK,Statistics Endpoints 2-6,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,32,0,0
+1746524433968,19,Books By Genre,200,OK,Statistics Endpoints 2-6,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,19,0,0
+1746524433988,31,Top Authors,200,OK,Statistics Endpoints 2-6,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,31,0,0
+1746524434019,15,Books By Genre,200,OK,Statistics Endpoints 2-6,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,15,0,0
+1746524434034,37,Top Authors,200,OK,Statistics Endpoints 2-6,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,37,0,0
+1746524435557,18,Books By Genre,200,OK,Statistics Endpoints 2-7,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,18,0,1
+1746524435576,27,Top Authors,200,OK,Statistics Endpoints 2-7,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,27,0,0
+1746524435604,15,Books By Genre,200,OK,Statistics Endpoints 2-7,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,15,0,0
+1746524435619,42,Top Authors,200,OK,Statistics Endpoints 2-7,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,42,0,0
+1746524435661,20,Books By Genre,200,OK,Statistics Endpoints 2-7,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,20,0,0
+1746524435681,33,Top Authors,200,OK,Statistics Endpoints 2-7,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,33,0,0
+1746524435714,15,Books By Genre,200,OK,Statistics Endpoints 2-7,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,15,0,0
+1746524435729,40,Top Authors,200,OK,Statistics Endpoints 2-7,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,40,0,0
+1746524435769,14,Books By Genre,200,OK,Statistics Endpoints 2-7,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,14,0,0
+1746524435784,31,Top Authors,200,OK,Statistics Endpoints 2-7,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,31,0,0
+1746524435815,21,Books By Genre,200,OK,Statistics Endpoints 2-7,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,21,0,0
+1746524435836,34,Top Authors,200,OK,Statistics Endpoints 2-7,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,34,0,0
+1746524435870,15,Books By Genre,200,OK,Statistics Endpoints 2-7,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,15,0,0
+1746524435897,33,Top Authors,200,OK,Statistics Endpoints 2-7,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,33,0,0
+1746524435930,16,Books By Genre,200,OK,Statistics Endpoints 2-7,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,16,0,0
+1746524435947,35,Top Authors,200,OK,Statistics Endpoints 2-7,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,35,0,0
+1746524435982,19,Books By Genre,200,OK,Statistics Endpoints 2-7,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,19,0,0
+1746524436001,33,Top Authors,200,OK,Statistics Endpoints 2-7,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,33,0,0
+1746524436035,14,Books By Genre,200,OK,Statistics Endpoints 2-7,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,13,0,0
+1746524436049,46,Top Authors,200,OK,Statistics Endpoints 2-7,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,46,0,0
+1746524437558,21,Books By Genre,200,OK,Statistics Endpoints 2-8,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,21,0,2
+1746524437580,30,Top Authors,200,OK,Statistics Endpoints 2-8,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,30,0,0
+1746524437610,21,Books By Genre,200,OK,Statistics Endpoints 2-8,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,21,0,0
+1746524437631,34,Top Authors,200,OK,Statistics Endpoints 2-8,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,34,0,0
+1746524437665,20,Books By Genre,200,OK,Statistics Endpoints 2-8,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,20,0,0
+1746524437685,43,Top Authors,200,OK,Statistics Endpoints 2-8,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,43,0,0
+1746524437728,17,Books By Genre,200,OK,Statistics Endpoints 2-8,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,17,0,0
+1746524437745,32,Top Authors,200,OK,Statistics Endpoints 2-8,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,32,0,0
+1746524437777,19,Books By Genre,200,OK,Statistics Endpoints 2-8,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,19,0,0
+1746524437796,34,Top Authors,200,OK,Statistics Endpoints 2-8,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,34,0,0
+1746524437830,15,Books By Genre,200,OK,Statistics Endpoints 2-8,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,15,0,0
+1746524437846,27,Top Authors,200,OK,Statistics Endpoints 2-8,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,27,0,0
+1746524437873,18,Books By Genre,200,OK,Statistics Endpoints 2-8,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,18,0,0
+1746524437906,33,Top Authors,200,OK,Statistics Endpoints 2-8,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,33,0,0
+1746524437939,14,Books By Genre,200,OK,Statistics Endpoints 2-8,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,14,0,0
+1746524437954,32,Top Authors,200,OK,Statistics Endpoints 2-8,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,32,0,0
+1746524437986,16,Books By Genre,200,OK,Statistics Endpoints 2-8,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,16,0,0
+1746524438002,35,Top Authors,200,OK,Statistics Endpoints 2-8,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,35,0,0
+1746524438037,13,Books By Genre,200,OK,Statistics Endpoints 2-8,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,13,0,0
+1746524438050,34,Top Authors,200,OK,Statistics Endpoints 2-8,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,34,0,0
+1746524439555,17,Books By Genre,200,OK,Statistics Endpoints 2-9,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,17,0,1
+1746524439572,26,Top Authors,200,OK,Statistics Endpoints 2-9,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,26,0,0
+1746524439598,18,Books By Genre,200,OK,Statistics Endpoints 2-9,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,18,0,0
+1746524439616,36,Top Authors,200,OK,Statistics Endpoints 2-9,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,36,0,0
+1746524439652,21,Books By Genre,200,OK,Statistics Endpoints 2-9,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,21,0,0
+1746524439673,26,Top Authors,200,OK,Statistics Endpoints 2-9,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,26,0,0
+1746524439699,25,Books By Genre,200,OK,Statistics Endpoints 2-9,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,25,0,0
+1746524439724,34,Top Authors,200,OK,Statistics Endpoints 2-9,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,34,0,0
+1746524439758,16,Books By Genre,200,OK,Statistics Endpoints 2-9,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,16,0,0
+1746524439775,36,Top Authors,200,OK,Statistics Endpoints 2-9,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,36,0,0
+1746524439811,20,Books By Genre,200,OK,Statistics Endpoints 2-9,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,20,0,0
+1746524439831,35,Top Authors,200,OK,Statistics Endpoints 2-9,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,35,0,0
+1746524439867,13,Books By Genre,200,OK,Statistics Endpoints 2-9,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,13,0,0
+1746524439881,54,Top Authors,200,OK,Statistics Endpoints 2-9,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,54,0,0
+1746524439935,15,Books By Genre,200,OK,Statistics Endpoints 2-9,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,15,0,0
+1746524439950,33,Top Authors,200,OK,Statistics Endpoints 2-9,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,33,0,0
+1746524439983,23,Books By Genre,200,OK,Statistics Endpoints 2-9,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,23,0,0
+1746524440006,49,Top Authors,200,OK,Statistics Endpoints 2-9,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,49,0,0
+1746524440055,15,Books By Genre,200,OK,Statistics Endpoints 2-9,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,15,0,0
+1746524440070,37,Top Authors,200,OK,Statistics Endpoints 2-9,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,37,0,0
+1746524441557,23,Books By Genre,200,OK,Statistics Endpoints 2-10,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,23,0,3
+1746524441581,31,Top Authors,200,OK,Statistics Endpoints 2-10,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,31,0,0
+1746524441612,16,Books By Genre,200,OK,Statistics Endpoints 2-10,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,16,0,0
+1746524441628,34,Top Authors,200,OK,Statistics Endpoints 2-10,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,34,0,0
+1746524441662,16,Books By Genre,200,OK,Statistics Endpoints 2-10,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,16,0,0
+1746524441678,30,Top Authors,200,OK,Statistics Endpoints 2-10,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,30,0,0
+1746524441709,14,Books By Genre,200,OK,Statistics Endpoints 2-10,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,14,0,0
+1746524441723,36,Top Authors,200,OK,Statistics Endpoints 2-10,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,36,0,0
+1746524441759,16,Books By Genre,200,OK,Statistics Endpoints 2-10,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,16,0,0
+1746524441775,30,Top Authors,200,OK,Statistics Endpoints 2-10,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,30,0,0
+1746524441805,18,Books By Genre,200,OK,Statistics Endpoints 2-10,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,18,0,0
+1746524441823,26,Top Authors,200,OK,Statistics Endpoints 2-10,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,26,0,0
+1746524441849,14,Books By Genre,200,OK,Statistics Endpoints 2-10,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,14,0,0
+1746524441863,39,Top Authors,200,OK,Statistics Endpoints 2-10,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,39,0,0
+1746524441903,15,Books By Genre,200,OK,Statistics Endpoints 2-10,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,15,0,0
+1746524441931,40,Top Authors,200,OK,Statistics Endpoints 2-10,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,40,0,0
+1746524441972,23,Books By Genre,200,OK,Statistics Endpoints 2-10,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,23,0,0
+1746524441995,29,Top Authors,200,OK,Statistics Endpoints 2-10,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,29,0,0
+1746524442025,23,Books By Genre,200,OK,Statistics Endpoints 2-10,text,true,,1534,136,1,1,http://localhost:8800/stats/books/by-genre,23,0,0
+1746524442049,39,Top Authors,200,OK,Statistics Endpoints 2-10,text,true,,1544,139,1,1,http://localhost:8800/stats/authors/top-rated,39,0,0

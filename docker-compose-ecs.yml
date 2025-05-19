@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  backend:
+    image: ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/mpp-backend:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+      - JWT_SECRET=${JWT_SECRET}
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: mpp-backend-logs
+        awslogs-region: ${AWS_REGION}
+        awslogs-stream-prefix: backend
+
+  frontend:
+    image: ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/mpp-frontend:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: mpp-frontend-logs
+        awslogs-region: ${AWS_REGION}
+        awslogs-stream-prefix: frontend 

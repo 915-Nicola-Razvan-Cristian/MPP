@@ -13,7 +13,7 @@ export default function Navbar()
                 <div className="btn" onClick={() => navigate("/")}>Home</div>
                 <div className="btn" onClick={() => navigate("/uploads")}>Uploads</div>
                 <div className="btn" onClick={() => navigate("/charts")}>Charts</div>
-                <div className="btn">FAQ</div>
+                <div className="btn" onClick={() => navigate("/authors")}>Authors</div>
                 <svg
                 className="outline"
                 overflow="visible"

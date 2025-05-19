@@ -79,7 +79,7 @@ const UpdatePage = (props) => {
     else
         return (
             <>
-                <Navbar />
+                {/* <Navbar /> */}
                 <div className="add-form">
                     <h1>Update Book</h1>
                     <form>

@@ -1,0 +1,239 @@
+.admin-dashboard {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.refresh-button {
+  padding: 0.5rem 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.refresh-button:hover {
+  background-color: #2980b9;
+}
+
+.delete-logs-button {
+  padding: 0.5rem 1rem;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.delete-logs-button:hover {
+  background-color: #c0392b;
+}
+
+.delete-logs-button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background-color: #e74c3c;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.success-message {
+  background-color: #2ecc71;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.monitored-users-section,
+.simulation-section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.monitored-users-section h2,
+.simulation-section h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.monitored-status-summary {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.active-count {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.resolved-count {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.total-count {
+  color: #3498db;
+  font-weight: bold;
+}
+
+.monitored-users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.monitored-users-table th,
+.monitored-users-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.monitored-users-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.active-alert {
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+.resolved-alert {
+  background-color: rgba(46, 204, 113, 0.1);
+}
+
+.resolve-button,
+.reactivate-button {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.resolve-button {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.resolve-button:hover {
+  background-color: #27ae60;
+}
+
+.reactivate-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.reactivate-button:hover {
+  background-color: #c0392b;
+}
+
+.simulation-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #34495e;
+}
+
+.form-group input {
+  width: 90%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.simulate-button {
+  padding: 0.75rem 1rem;
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.simulate-button:hover {
+  background-color: #8e44ad;
+}
+
+.simulate-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.simulation-note {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  line-height: 1.4;
+}
+
+@media (max-width: 991.98px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .dashboard-header h1 {
+    margin-bottom: 1rem;
+  }
+} 

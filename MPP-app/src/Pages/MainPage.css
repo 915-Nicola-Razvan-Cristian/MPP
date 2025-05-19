@@ -1,5 +1,3 @@
-
-
 .input#author {
     font-family: "Montserrat", sans-serif;
     width: 10%;
@@ -86,3 +84,171 @@
     font-size: 16px;
     z-index: 1000; /* Ensure it appears above other content */
   }
+
+.book-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    margin: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.filter-section input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex-grow: 1;
+    min-width: 200px;
+}
+
+.admin-options {
+    padding: 8px 15px;
+    background-color: #e3f2fd;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.admin-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #0d47a1;
+}
+
+.admin-options input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.pagination button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #4a69bd;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #3c5da0;
+}
+
+.pagination button:disabled {
+    background-color: #a0b1d9;
+    cursor: not-allowed;
+}
+
+.page-indicator {
+    font-weight: 500;
+    color: #333;
+}
+
+.loading, .no-books {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.sort-button button {
+    padding: 8px 15px;
+    background-color: #4a69bd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sort-button button:hover {
+    background-color: #3c5da0;
+}
+
+.search-button {
+    padding: 8px 15px;
+    background: linear-gradient(135deg, #6a3093 0%, #a044ff 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    min-width: 80px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 3px 10px rgba(106, 48, 147, 0.2);
+}
+
+.search-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 12px rgba(106, 48, 147, 0.3);
+    background: linear-gradient(135deg, #7b3aaa 0%, #b366ff 100%);
+}
+
+.search-button:active {
+    transform: translateY(0);
+    box-shadow: 0px 2px 6px rgba(106, 48, 147, 0.2);
+}
+
+@media (max-width: 768px) {
+    .filters-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-section {
+        flex-direction: column;
+    }
+    
+    .sort-button {
+        width: 100%;
+    }
+    
+    .admin-options {
+        width: 100%;
+    }
+    
+    .book-container {
+        grid-template-columns: 1fr;
+    }
+}

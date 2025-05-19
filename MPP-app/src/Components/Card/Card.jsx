@@ -1,17 +1,16 @@
 import axios from 'axios'
 import './Card.css'
 import { Link, useNavigate } from 'react-router-dom'
-import { forwardRef, useEffect, useRef } from 'react';
+import { forwardRef, useEffect, useRef, useState } from 'react';
 import { saveOperation, getAllOperations, clearOperations, getAllBooks, deleteBook } from "../../utils/offlineStorage";
-
+import { useAuth } from '../../utils/AuthContext';
 
 const Card = forwardRef((props, ref) => {
-
-
     const navigate = useNavigate();
+    const { isAuthenticated } = useAuth();
+    const [addingToCollection, setAddingToCollection] = useState(false);
 
     const handleDelete = async (id) => {
-
         if (props.isOfflineMode) {
             deleteBook(id)
              alert("Book deleted. Changes will be synced when you are online.")
@@ -33,9 +32,30 @@ const Card = forwardRef((props, ref) => {
         navigate(`/update/` + props.book.id)
     }
 
+    const handleAddToCollection = async () => {
+        if (!isAuthenticated) {
+            alert('Please log in to add books to your collection');
+            navigate('/login');
+            return;
+        }
+
+        try {
+            setAddingToCollection(true);
+            await axios.post(`http://localhost:8800/users/books/${props.book.id}`);
+            alert('Book added to your collection!');
+        } catch (err) {
+            if (err.response && err.response.status === 409) {
+                alert('This book is already in your collection');
+            } else {
+                console.error('Error adding book to collection:', err);
+                alert('Failed to add book to collection. Please try again.');
+            }
+        } finally {
+            setAddingToCollection(false);
+        }
+    };
 
     const ratingRef = useRef(null)
-
 
     useEffect(() => {
         const colorful = () => {
@@ -59,18 +79,25 @@ const Card = forwardRef((props, ref) => {
     return (
         <div className="card-container" ref={ref}>
             <div className="card">
-                {props.book.Cover && <img className='cover-img' src={props.book.cover} alt="cover" />}
-                <div className="card-title" >{props.book.title}</div>
+                <div className="cover-container">
+                    <img 
+                        className="cover-img" 
+                        src={props.book.cover || '/placeholder-cover.jpg'} 
+                        alt={props.book.title || 'Book cover'} 
+                    />
+                    <div className="fade-overlay"></div>
+                </div>
+                <div className="card-title">{props.book.title}</div>
                 <div className="card-content-container">
                     <div className="card-content" id='author'>{props.book.author}</div>
                     <div className="card-content" id='rating' ref={ratingRef}>Rating: {props.book.rating} / 10</div>
-                    <div className="card-content" id='price' >Price: {props.book.price}$</div>
+                    <div className="card-content" id='price'>Price: {props.book.price}$</div>
                 </div>
             </div>
             <div className='button-container'>
-                <button aria-label="Delete item" class="delete-button" onClick={() => handleDelete(props.book.id)}>
+                <button aria-label="Delete item" className="delete-button" onClick={() => handleDelete(props.book.id)}>
                     <svg
-                        class="trash-svg"
+                        className="trash-svg"
                         viewBox="0 -10 64 74"
                         xmlns="http://www.w3.org/2000/svg"
                     >
@@ -108,10 +135,17 @@ const Card = forwardRef((props, ref) => {
                         </g>
                     </svg>
                 </button>
-                <button onClick={handleUpdate} class="edit-button">
-                    <span class="lable">Edit</span>
+                <button onClick={handleUpdate} className="edit-button">
+                    <span className="lable">Edit</span>
                 </button>
-                <Link to={`/media/${props.book.media}`} className='media-button'>Media</Link>
+                {/* <Link to={`/media/${props.book.media}`} className='media-button'>Media</Link> */}
+                <button 
+                    onClick={handleAddToCollection} 
+                    className='collection-button'
+                    disabled={addingToCollection}
+                >
+                    {addingToCollection ? 'Adding...' : 'Add to Collection'}
+                </button>
             </div>
             {/* <button className='edit-button'><Link to={`update/${props.book.id}`}>Edit</Link></button> */}
         </div>

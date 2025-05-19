@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BackButton from "../Components/BackButton/BackButton";
 import "./AddForm.css";
 import AddButton from "../Components/AddButton/AddButton";
@@ -23,25 +23,46 @@ const AddForm = (props) => {
         rating: 0
     })
 
+
+    const [authors, setAuthors] = useState([])
+    const [selectedAuthor, setSelectedAuthor] = useState(null)
+
+
+
+    useEffect(() => {
+        const fetchAuthors = async () => {
+            try {
+                const res = await axios.get("http://localhost:8800/authors")
+                setAuthors(res.data)
+            }
+            catch (err) {
+                console.log(err)
+            }
+        }
+        fetchAuthors()
+    }, [])
+
+
     const navigate = useNavigate()
 
     const addFormButtonHandler = async () => {
         if (document.getElementById('title').value === '' || document.getElementById('author').value === '' || document.getElementById('price').value === '') {
             alert('Please fill in the Title, Author and Price fields!');
             return;
-        }
+        }       
 
 
 
         if (!props.isOfflineMode) {
             const newBook = {
                 title: document.getElementById('title').value,
-                author: document.getElementById('author').value,
+                author: selectedAuthor,
                 cover: document.getElementById('cover').value,
                 desc: document.getElementById('desc').value,
                 rating: document.getElementById('rating').value ? document.getElementById('rating').value : null,
                 price: document.getElementById('price').value
             }
+            console.log(newBook)
             setBook(newBook);
             try {
                 await axios.post("http://localhost:8800/books", newBook)
@@ -73,11 +94,20 @@ const AddForm = (props) => {
 
     return (
         <div className="no-overflow">
-            <Navbar />
+            {/* <Navbar /> */}
             <div className="add-form">
                 <h1>Add New Book</h1>
                 <input id="title" type="text" placeholder="Title..." />
-                <input id="author" type="text" placeholder="Author..." />
+                <select id="author" placeholder="Author..." onChange={(e) => {setSelectedAuthor(e.target.value)
+                console.log(e.target.value)
+                }} >
+                    <option value="">Select an author</option>
+                    {authors.map((author) => (
+                        <option key={author.id} value={author.id}>
+                            {author.name}
+                        </option>
+                    ))}
+                </select>
                 <input id="price" type="number" placeholder="Price..." />
                 <input id="cover" type="text" placeholder="*Cover..." />
                 <input id="desc" type="text" placeholder="*Description..." />

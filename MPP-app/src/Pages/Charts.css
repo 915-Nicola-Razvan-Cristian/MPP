@@ -1,6 +1,8 @@
 .dashboard {
     /* padding: 20px; */
     font-family: Arial, sans-serif;
+    max-width: 1400px;
+    margin: 0 auto;
   }
   
   .chart-container {
@@ -19,11 +21,137 @@
     margin: 90px;
     width: 80%;
     height: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease;
   }
 
+  .chart:hover {
+    transform: translateY(-5px);
+  }
   
-h2 {
+  h2 {
     color: #555;
     font-size: 1.2rem;
     margin-bottom: 15px;
+  }
+
+  /* Tab navigation styles */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+
+  .tabs button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #555;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .tabs button:hover {
+    color: #000;
+  }
+
+  .tabs button.active {
+    color: #0066cc;
+    font-weight: bold;
+  }
+
+  .tabs button.active:after {
+    content: '';
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #0066cc;
+  }
+
+  .refresh-button {
+    background-color: #f0f0f0 !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px;
+    margin-left: auto !important;
+    padding: 5px 10px !important;
+    font-size: 14px !important;
+    color: #333 !important;
+    display: flex;
+    align-items: center;
+  }
+
+  .refresh-button:hover {
+    background-color: #e0e0e0 !important;
+    color: #000 !important;
+  }
+
+  .refresh-button:before {
+    content: "↻";
+    margin-right: 5px;
+    font-size: 14px;
+  }
+
+  .charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+
+  /* No data message styles */
+  .no-data-message {
+    width: 80%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .no-data-message h3 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .no-data-message ul {
+    text-align: left;
+    margin: 1rem auto;
+    max-width: 400px;
+  }
+
+  .no-data-message li {
+    margin-bottom: 0.5rem;
+  }
+
+  .no-data-message button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .no-data-message button:hover {
+    background-color: #004d99;
+  }
+
+  @media (max-width: 768px) {
+    .chart {
+      width: 95%;
+      margin: 10px auto;
+    }
   }

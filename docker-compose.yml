@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./Backend
+    container_name: mpp-backend
+    ports:
+      - "8800:8800"
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=rootpassword
+      - DB_NAME=mpp_database
+      - JWT_SECRET=mysecretkey
+    depends_on:
+      - db
+    volumes:
+      - ./Backend:/usr/src/app
+      - /usr/src/app/node_modules
+    networks:
+      - mpp-network
+
+  frontend:
+    build: ./MPP-app
+    container_name: mpp-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - mpp-network
+
+  db:
+    image: mysql:8.0
+    container_name: mpp-db
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_DATABASE=mpp_database
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - mpp-network
+
+networks:
+  mpp-network:
+    driver: bridge
+
+volumes:
+  mysql-data: 

@@ -1,0 +1,177 @@
+.collection-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.collection-container h1 {
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.collection-loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.collection-error {
+  background-color: #e74c3c;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.collection-empty {
+  text-align: center;
+  padding: 3rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.collection-empty p {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.browse-books-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.browse-books-btn:hover {
+  background-color: #2980b9;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.collection-book-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.collection-book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.collection-book-cover {
+  height: 250px;
+  overflow: hidden;
+}
+
+.collection-book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collection-book-info {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.collection-book-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.collection-book-author {
+  margin: 0 0 0.5rem 0;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.collection-book-genres {
+  margin: 0 0 0.5rem 0;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.collection-book-rating {
+  margin: 0.5rem 0;
+  font-weight: bold;
+  color: #f39c12;
+}
+
+.collection-book-added {
+  margin: 0.5rem 0 1rem 0;
+  font-size: 0.9rem;
+  color: #95a5a6;
+}
+
+.collection-book-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.collection-view-btn, .collection-remove-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+  flex: 1;
+}
+
+.collection-view-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.collection-view-btn:hover {
+  background-color: #2980b9;
+}
+
+.collection-remove-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.collection-remove-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .collection-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .collection-container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .collection-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+} 
